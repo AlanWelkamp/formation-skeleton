@@ -1,0 +1,6 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        [{{ support.title|upper }}] - {{ support.description }} || Crée le {{ support.createdAt|date('d/m/Y')}}
+        <a class = "btn btn-primary" href= "{{path('support_list')}}"> Retour à la liste</a>
+{% endblock %}

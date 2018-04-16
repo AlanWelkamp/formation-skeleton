@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}  voir mon article {{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('build/css/article_show.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1 class="article_title">{{ article.title }}</h1>
+
+    <p>{{ article.content }}</p>
+
+    <a class="btn btn-primary"
+       href="{{ path('article_list') }}">Retour à la liste</a>
+{% endblock %}
